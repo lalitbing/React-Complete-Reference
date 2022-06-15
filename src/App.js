@@ -1,3 +1,4 @@
+import CustomHooks from './CustomHooks/CustomHooks';
 import Hooks3UseContext from './Hooks/useContext/Hooks3';
 import HooksUseEffect from './Hooks/useEffect,useState/Hooks1';
 import Hooks4Memo from './Hooks/useMemo/Hooks4';
@@ -13,7 +14,8 @@ function App() {
       {/* <HooksUseReduceToDO /> */}
       {/* <Hooks3UseContext /> */}
       {/* <Hooks4Memo /> */}
-      <Hooks5useRef />
+      {/* <Hooks5useRef /> */}
+      <CustomHooks />
     </div>
   );
 }
