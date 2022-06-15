@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 
 const Hooks2Counter = () => {
+  document.title = `Counter`;
   const ACTIONS = {
     INCREMENT: 'increment',
     DECREMENT: 'decrement',
