@@ -1,13 +1,11 @@
 import React, { useState, useMemo } from 'react';
 
-document.title = `useMemo`;
-
 const Hooks4Memo = () => {
+  document.title = `useMemo`;
   const [num, setNum] = useState(1);
   const [inc, setInc] = useState(0);
 
   const factorialFun = (n) => {
-    console.log('factorial called');
     return n <= 0 ? 1 : n * factorialFun(n - 1);
   };
   const factorial = useMemo(() => factorialFun(num), [num]);

@@ -200,3 +200,12 @@ const mul = (x) => (y) => (z) => {
 return x _ y _ z;
 };
 console.log(mul(2)(2)(2));
+
+## Factorial
+
+/*
+const factorialFun = (n) => {
+return n <= 0 ? 1 : n*factorialFun(n - 1);
+};
+
+\*/
