@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
+document.title = `useContext`;
+
 const UserContext = createContext();
 
 function Component1() {
