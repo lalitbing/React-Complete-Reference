@@ -32,10 +32,6 @@ const AxiosProducts = () => {
     return CapitalizedWords.join(' ');
   }
 
-  function capHandler(i) {
-    setProducts(products.map((i) => ({ ...i, name: capitalize(i.name) })));
-  }
-
   function capitalizeHandler() {
     setActive(!isActive);
   }

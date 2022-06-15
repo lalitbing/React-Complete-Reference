@@ -1,3 +1,5 @@
+import AxiosCocktails from './AxiosFetchingData/AxiosCocktails';
+import AxiosProducts from './AxiosFetchingData/AxiosProducts';
 import CustomHooks from './CustomHooks/CustomHooks';
 import Hooks3UseContext from './Hooks/useContext/Hooks3';
 import HooksUseEffect from './Hooks/useEffect,useState/Hooks1';
@@ -7,6 +9,7 @@ import HooksUseReduceToDO from './Hooks/useReduce/Todo App/Hooks2ToDo';
 import Hooks5useRef from './Hooks/useRef/Hooks5';
 
 function App() {
+  document.title = `React Main`;
   return (
     <div>
       {/* <HooksUseEffect /> */}
@@ -15,7 +18,9 @@ function App() {
       {/* <Hooks3UseContext /> */}
       {/* <Hooks4Memo /> */}
       {/* <Hooks5useRef /> */}
-      <CustomHooks />
+      {/* <CustomHooks /> */}
+      {/* <AxiosProducts /> */}
+      <AxiosCocktails />
     </div>
   );
 }

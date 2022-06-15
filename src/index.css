@@ -24,10 +24,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-h3 {
-  font-size: 3.5rem;
-}
-
 p {
   margin-top: 1rem;
   color: rgb(91, 87, 87);
@@ -66,4 +62,8 @@ input {
 
 .leftAlign {
   text-align: left;
+}
+
+.capitalizeText {
+  text-transform: capitalize;
 }
