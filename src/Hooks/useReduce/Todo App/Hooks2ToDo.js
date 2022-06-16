@@ -7,7 +7,6 @@ export const ACTIONS = {
   COMPLETE_TODO: 'COMPLETE_TODO',
   RESET_TODO: 'RESET_TODO',
 };
-document.title = `ToDo App`;
 
 const Hooks2ToDo = () => {
   const [name, setName] = useState('');

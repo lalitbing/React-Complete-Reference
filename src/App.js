@@ -13,7 +13,6 @@ import Task1Todo from './Tasks/Task1';
 import Task2Temperature from './Tasks/Task2Temp';
 
 function App() {
-  document.title = `React Main`;
   return (
     <div>
       {/* <HooksUseEffect /> */}

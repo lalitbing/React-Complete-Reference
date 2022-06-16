@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 
 const Hooks4Memo = () => {
-  document.title = `useMemo`;
   const [num, setNum] = useState(1);
   const [inc, setInc] = useState(0);
 
