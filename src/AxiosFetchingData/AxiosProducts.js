@@ -37,25 +37,32 @@ const AxiosProducts = () => {
   }
 
   return (
-    <>
+    <div className="main">
       <button onClick={fetchData}>Fetch Products</button>
       <button onClick={clearProducts}>Clear Products</button>
       <div>
         {products.map((product) => {
           return (
-            <div id={product.id} key={product.id}>
+            <div className="product" id={product.id} key={product.id}>
               <h3 className={isActive ? 'capitalizeText' : ''}>
                 {product.name}
               </h3>
-              <button onClick={() => clearSingleProduct(product.id)}>
-                Clear
-              </button>
-              <button onClick={capitalizeHandler}>Capitalize</button>
+              <div>
+                <button
+                  className="smallBtn"
+                  onClick={() => clearSingleProduct(product.id)}
+                >
+                  Clear
+                </button>
+                <button className="smallBtn" onClick={capitalizeHandler}>
+                  Capitalize
+                </button>
+              </div>
             </div>
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

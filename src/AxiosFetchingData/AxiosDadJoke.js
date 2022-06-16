@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const AxiosExample = () => {
+const AxiosDadJoke = () => {
   const url = 'https://icanhazdadjoke.com';
 
-  const [joke, setData] = useState('random joke');
+  const [joke, setData] = useState(' ');
 
   const fetchData = async () => {
     try {
@@ -21,12 +21,18 @@ const AxiosExample = () => {
     }
   };
 
+  console.log(joke);
+
   return (
-    <div>
+    <div className="main">
       <button onClick={fetchData}>Fetch Dad Joke</button>
-      <p id={Date.now()}>{joke}</p>
+      {joke === ' ' ? (
+        <p id={Date.now()}>"Click to get random joke"</p>
+      ) : (
+        <p id={Date.now()}>{joke}</p>
+      )}
     </div>
   );
 };
 
-export default AxiosExample;
+export default AxiosDadJoke;

@@ -13,13 +13,15 @@ const AxiosCocktails = () => {
       //   console.log(drinks);
       if (drinks) {
         const newCocktails = drinks.map((item) => {
-          const { idDrink, strDrink } = item;
+          const { idDrink, strDrink, strCategory, strDrinkThumb } = item;
           return {
             id: idDrink,
             name: strDrink,
+            category: strCategory,
+            image: strDrinkThumb,
           };
         });
-        setCocktails(drinks);
+        setCocktails(newCocktails);
       } else {
         setCocktails([]);
       }
@@ -37,7 +39,18 @@ const AxiosCocktails = () => {
   return (
     <div className="main">
       <h1>Axios Cocktails</h1>
-      {/* <div>{cocktails}</div> */}
+
+      <div className="drinksContainer">
+        {cocktails.map((item) => {
+          return (
+            <div key={item.id} className="singleDrink">
+              <img src={item.image} alt="drink-image" />
+              <h3>{item.name}</h3>
+              <p> {item.category} </p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

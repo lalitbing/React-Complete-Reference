@@ -1,4 +1,5 @@
 import AxiosCocktails from './AxiosFetchingData/AxiosCocktails';
+import AxiosDadJoke from './AxiosFetchingData/AxiosDadJoke';
 import AxiosProducts from './AxiosFetchingData/AxiosProducts';
 import AxiosRandomUsers from './AxiosFetchingData/AxiosRandomUsers';
 import CustomHooks from './CustomHooks/CustomHooks';
@@ -20,9 +21,10 @@ function App() {
       {/* <Hooks4Memo /> */}
       {/* <Hooks5useRef /> */}
       {/* <CustomHooks /> */}
-      {/* <AxiosProducts /> */}
       {/* <AxiosRandomUsers /> */}
-      <AxiosCocktails />
+      {/* <AxiosCocktails /> */}
+      {/* <AxiosDadJoke /> */}
+      <AxiosProducts />
     </div>
   );
 }

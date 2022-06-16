@@ -16,6 +16,7 @@ body {
 
 .main {
   text-align: center;
+  width: 90vw;
 }
 
 h1 {
@@ -66,4 +67,35 @@ input {
 
 .capitalizeText {
   text-transform: capitalize;
+}
+
+.drinksContainer {
+  width: 80vw;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 5fr 5fr 5fr;
+  grid-template-rows: 5fr 5fr 5fr;
+}
+
+.singleDrink img {
+  width: 10rem;
+  border-radius: 1rem;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product h3 {
+  display: inline-block;
+}
+.smallBtn {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  margin: 0.5rem;
+  background-color: rgb(173, 2, 2);
+  color: white;
+  border-radius: 0.2rem;
 }
