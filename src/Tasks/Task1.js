@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Sample = () => {
+const Task1Todo = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState('');
@@ -48,7 +48,7 @@ const Sample = () => {
   // console.log(data);
 
   return (
-    <div>
+    <div className="main">
       {err && <h2>{err}</h2>}
 
       <button className="main-btn" onClick={handleClick}>
@@ -63,13 +63,15 @@ const Sample = () => {
       <div className="items">
         {data.map((item) => {
           return (
-            <div key={item.id} className="list">
+            <div className="smallFlex" key={item.id}>
               <ul>
                 <h3>{item.title}</h3>
               </ul>
               <div>
-                <button onClick={clearSingleTask}>X</button>
-                <button className="cap-btn" onClick={capitalizeHandler}>
+                <button className="smallBtn" onClick={clearSingleTask}>
+                  X
+                </button>
+                <button className="smallBtn" onClick={capitalizeHandler}>
                   Capitalize
                 </button>
               </div>
@@ -81,4 +83,4 @@ const Sample = () => {
   );
 };
 
-export default Sample;
+export default Task1Todo;

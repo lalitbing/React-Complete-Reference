@@ -9,6 +9,8 @@ import Hooks4Memo from './Hooks/useMemo/Hooks4';
 import HooksUseReduceCounter from './Hooks/useReduce/Hooks2Counter';
 import HooksUseReduceToDO from './Hooks/useReduce/Todo App/Hooks2ToDo';
 import Hooks5useRef from './Hooks/useRef/Hooks5';
+import Task1Todo from './Tasks/Task1';
+import Task2Temperature from './Tasks/Task2Temp';
 
 function App() {
   document.title = `React Main`;
@@ -24,7 +26,9 @@ function App() {
       {/* <AxiosRandomUsers /> */}
       {/* <AxiosCocktails /> */}
       {/* <AxiosDadJoke /> */}
-      <AxiosProducts />
+      {/* <AxiosProducts /> */}
+      {/* <Task1Todo /> */}
+      <Task2Temperature />
     </div>
   );
 }

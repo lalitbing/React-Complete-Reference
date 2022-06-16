@@ -43,7 +43,7 @@ const AxiosProducts = () => {
       <div>
         {products.map((product) => {
           return (
-            <div className="product" id={product.id} key={product.id}>
+            <div className="smallFlex" id={product.id} key={product.id}>
               <h3 className={isActive ? 'capitalizeText' : ''}>
                 {product.name}
               </h3>

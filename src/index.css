@@ -82,13 +82,16 @@ input {
   border-radius: 1rem;
 }
 
-.product {
+.smallFlex {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 
-.product h3 {
+.smallFlex h3 {
   display: inline-block;
+  width: 50vw;
+  margin-bottom: 1rem;
 }
 .smallBtn {
   display: inline-block;
