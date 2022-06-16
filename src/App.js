@@ -1,5 +1,6 @@
 import AxiosCocktails from './AxiosFetchingData/AxiosCocktails';
 import AxiosProducts from './AxiosFetchingData/AxiosProducts';
+import AxiosRandomUsers from './AxiosFetchingData/AxiosRandomUsers';
 import CustomHooks from './CustomHooks/CustomHooks';
 import Hooks3UseContext from './Hooks/useContext/Hooks3';
 import HooksUseEffect from './Hooks/useEffect,useState/Hooks1';
@@ -20,6 +21,7 @@ function App() {
       {/* <Hooks5useRef /> */}
       {/* <CustomHooks /> */}
       {/* <AxiosProducts /> */}
+      {/* <AxiosRandomUsers /> */}
       <AxiosCocktails />
     </div>
   );
