@@ -4,7 +4,7 @@ import axios from 'axios';
 const AxiosDadJoke = () => {
   const url = 'https://icanhazdadjoke.com';
 
-  const [joke, setData] = useState(' ');
+  const [joke, setJoke] = useState(' ');
 
   const fetchData = async () => {
     try {
@@ -14,7 +14,7 @@ const AxiosDadJoke = () => {
         },
       });
       const data = resp.data;
-      setData(data.joke);
+      setJoke(data.joke);
       return data;
     } catch (error) {
       console.log('some error fetching data');

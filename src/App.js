@@ -11,6 +11,7 @@ import HooksUseReduceToDO from './Hooks/useReduce/Todo App/Hooks2ToDo';
 import Hooks5useRef from './Hooks/useRef/Hooks5';
 import Task1Todo from './Tasks/Task1';
 import Task2Temperature from './Tasks/Task2Temp';
+import JSBasics from './_JSBasics/JSBasics';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       {/* <AxiosDadJoke /> */}
       {/* <AxiosProducts /> */}
       {/* <Task1Todo /> */}
-      <Task2Temperature />
+      {/* <Task2Temperature /> */}
+      <JSBasics />
     </div>
   );
 }

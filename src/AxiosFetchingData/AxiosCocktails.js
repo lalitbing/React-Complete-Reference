@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 
 const AxiosCocktails = () => {
@@ -6,7 +6,7 @@ const AxiosCocktails = () => {
   const [cocktails, setCocktails] = useState([]);
   const [searchTerm, setSearchTerm] = useState('a');
 
-  const fetchDrinks = async () => {
+  const fetchDrinks = useCallback(async () => {
     try {
       const { data } = await axios.get(url);
       const { drinks } = data;
@@ -28,9 +28,9 @@ const AxiosCocktails = () => {
     } catch (error) {
       console.log(error.response);
     }
-  };
+  });
 
-  console.log(cocktails);
+  // console.log(cocktails);
 
   useEffect(() => {
     fetchDrinks();
