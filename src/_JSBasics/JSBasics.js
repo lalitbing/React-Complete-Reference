@@ -1,39 +1,63 @@
 import React from 'react';
 
 const JSBasics = () => {
-  const arr1 = [50, 60, 70, 80, 90];
-  const arr2 = [10, 20, 30, 40, 50];
+  // function outer(x) {
+  //   console.log('outer');
+  //   function inner() {
+  //     console.log(x);
+  //   }
+  //   return inner;
+  // }
 
-  const arr3 = [...arr1, ...arr2];
-  console.log('initial array:', arr3);
+  // var x = 20;
+  // outer(10)();
 
-  function sorted(array) {
-    var done = false;
-    while (!done) {
-      done = true;
-      for (let i = 1; i < array.length; i++) {
-        if (array[i - 1] > array[i]) {
-          done = false;
-          var temp = array[i - 1];
-          array[i - 1] = array[i];
-          array[i] = temp;
-        }
+  // const obj1 = {
+  //   num: 10,
+  // };
+
+  // function add(a) {
+  //   return this.num + a;
+  // }
+
+  // console.log(add.call(obj1, 100));
+
+  // const random = add.bind(obj1, 5);
+  // console.log(random());
+
+  function dupli(arr) {
+    let cache = {};
+    let results = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (cache[arr[i]]) {
+        results.push(arr[i]);
+      } else {
+        cache[arr[i]] = true;
       }
     }
-    return array;
+    return results;
   }
 
-  const displayArray = sorted(arr3);
-  console.log('sorted array:', displayArray);
+  const arr1 = [10, 20, 20, 30, 40, 40, 50];
+  console.log(dupli(arr1));
 
-  const arr4 = arr3.sort((a, b) => a - b);
+  const myPromise = new Promise((resolve, reject) => {
+    const x = 'lalit';
+    const y = 'lalit';
+    if (x == y) {
+      resolve();
+    } else {
+      reject();
+    }
+  });
 
-  console.log('Sort method() :', arr4);
+  myPromise
+    .then(() => console.log('x nd y are same'))
+    .catch(() => console.log('x and y not same'));
 
   return (
     <div className="main">
       <h1>JS Basics</h1>
-      {/* <p>{`Result = [${array}]`} </p> */}
     </div>
   );
 };

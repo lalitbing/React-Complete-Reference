@@ -81,7 +81,7 @@ if (previousValues[neededValue] != null) {
 return [previousValues[neededValue], i];
 }
 else {
-previousValues[currentValue] = i;
+previousValues[arr[i]] = i;
 }
 
 }
@@ -214,6 +214,12 @@ return n <= 0 ? 1 : n*factorialFun(n - 1);
 
 \*/
 
+## Array Sort()
+
+const array = [10, 5, 8, 1, 7];
+const newArr = array.sort((a, b) => a - b);
+console.log('Sort method() :', newArr);
+
 ## bubble sort array
 
 let arr = [10, 5, 8, 1, 7];
@@ -242,28 +248,6 @@ console.log(arr);
 const arr1 = [50, 60, 70, 80, 90];
 const arr2 = [10, 20, 30, 40, 50];
 
-const arr3 = [...arr1, ...arr2];
-console.log('initial array:', arr3);
-
-function sorted(array) {
-var done = false;
-while (!done) {
-done = true;
-for (let i = 1; i < array.length; i++) {
-if (array[i - 1] > array[i]) {
-done = false;
-var temp = array[i - 1];
-array[i - 1] = array[i];
-array[i] = temp;
-}
-}
-}
-return array;
-}
-
-const displayArray = sorted(arr3);
-console.log('sorted array:', displayArray);
-
 ## Duplicates from an array
 
 let array = [10, 5, 10, 5, 8, 1, 7];
@@ -290,7 +274,7 @@ return new Promise((resolve) => setTimeout(resolve, ms));
 
 async function demo() {
 for (let i = 0; i < 5; i++) {
-await sleep(i* 1000);
+await sleep(i * 1000);
 console.log(`Waiting ${i} seconds...`);
 }
 console.log('Done');
@@ -336,16 +320,63 @@ console.log(arr2);
 
 // console.log(arr1);
 
-function sleep(ms) {
-return new Promise((resolve) => setTimeout(resolve, ms));
+##
+
+const array = [10, 20, 30, 40, [100, 200, [1000, 2000]]];
+
+const str1 = 'fired';
+const str2 = 'fried';
+
+(function checkAnagram(a, b) {
+if (a.length != b.length) {
+console.log('invalid');
+}
+let str1 = a.split('').sort().join('');
+let str2 = b.split('').sort().join('');
+
+if (str1 == str2) {
+console.log('true');
+} else {
+console.log('false');
+}
+})(str1, str2);
+
+function checkArray(arr, level) {
+const newArray = [];
+
+for (let i = 0; i < arr.length; i++) {
+if (Array.isArray(arr[i])) {
+newArray.push(...arr[i]);
+for (j = 0; j < arr[i].length; j++) {
+if (Array.isArray(arr[i][j])) {
+newArray.push(...arr[i][j]);
+}
+}
+} else {
+newArray.push(arr[i]);
+}
+}
+return newArray;
 }
 
-async function demo() {
-for (let i = 0; i < 5; i++) {
-await sleep(i \* 1000);
-console.log(`Waiting ${i} seconds`);
-}
-console.log('done');
-}
+## Flatten an array
 
-demo();
+console.log(checkArray(array));
+
+function flatArray(arr) {
+let result = []; // In this we`ll save the output;
+let main = arr,
+first;
+console.log(main);
+while (main.length > 0) {
+first = main[0];
+if (Array.isArray(first)) {
+Array.prototype.splice.apply(main, [0, 1].concat(first));
+} else {
+result.push(first);
+main.splice(0, 1);
+}
+}
+return result;
+}
+console.log(flatArray(array));
