@@ -24,12 +24,12 @@ function App() {
       {/* <Hooks5useRef /> */}
       {/* <CustomHooks /> */}
       {/* <AxiosRandomUsers /> */}
-      {/* <AxiosCocktails /> */}
+      <AxiosCocktails />
       {/* <AxiosDadJoke /> */}
       {/* <AxiosProducts /> */}
       {/* <Task1Todo /> */}
       {/* <Task2Temperature /> */}
-      <JSBasics />
+      {/* <JSBasics /> */}
     </div>
   );
 }

@@ -5,6 +5,11 @@
   border: 0;
   /* box-sizing: border-box; */
   font-family: 'Poppins', sans-serif;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -78,7 +83,7 @@ input {
 }
 
 .singleDrink img {
-  width: 10rem;
+  width: 12rem;
   border-radius: 1rem;
 }
 
