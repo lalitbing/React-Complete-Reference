@@ -25,3 +25,5 @@ The values should be updated live.
 -----------Task 3-----------------------------------
 
 update the input to the dom directly.
+
+- done
