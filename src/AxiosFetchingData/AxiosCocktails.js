@@ -4,7 +4,7 @@ import axios from 'axios';
 const AxiosCocktails = () => {
   const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a';
   const [cocktails, setCocktails] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('a');
+  // const [searchTerm, setSearchTerm] = useState('a');
 
   const fetchDrinks = useCallback(async () => {
     try {
