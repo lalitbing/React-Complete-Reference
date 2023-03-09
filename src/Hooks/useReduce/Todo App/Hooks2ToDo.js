@@ -1,15 +1,15 @@
-import React, { useReducer, useState } from 'react';
-import TODO_useReduce from './TODO_useReduce';
+import React, { useReducer, useState } from "react";
+import TODO_useReduce from "./TODO_useReduce";
 
 export const ACTIONS = {
-  ADD_TODO: 'ADD_TODO',
-  DELETE_TODO: 'DELETE_TODO',
-  COMPLETE_TODO: 'COMPLETE_TODO',
-  RESET_TODO: 'RESET_TODO',
+  ADD_TODO: "ADD_TODO",
+  DELETE_TODO: "DELETE_TODO",
+  COMPLETE_TODO: "COMPLETE_TODO",
+  RESET_TODO: "RESET_TODO",
 };
 
 const Hooks2ToDo = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [todos, dispatch] = useReducer(reducer, []);
 
   function reducer(todos, action) {
@@ -24,7 +24,7 @@ const Hooks2ToDo = () => {
           return todo;
         });
       case ACTIONS.DELETE_TODO:
-        return todos.filter((todo) => todo.id != action.payload.id);
+        return todos.filter((todo) => todo.id !== action.payload.id);
 
       case ACTIONS.RESET_TODO:
         return [];
@@ -40,7 +40,7 @@ const Hooks2ToDo = () => {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name } });
-    setName('');
+    setName("");
   }
   return (
     <div className="main">
@@ -56,14 +56,15 @@ const Hooks2ToDo = () => {
 
         {todos.map((todo) => {
           return (
+            // eslint-disable-next-line react/jsx-pascal-case
             <TODO_useReduce key={todo.id} todo={todo} dispatch={dispatch} />
           );
         })}
         {/* {console.log(todos)} */}
       </div>
       <div className="leftAlign">
-        {todos.length == 0 ? (
-          ''
+        {todos.length === 0 ? (
+          ""
         ) : (
           <button
             onClick={() => {

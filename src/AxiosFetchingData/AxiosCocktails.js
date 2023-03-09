@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState, useCallback } from "react";
+import axios from "axios";
 
 const AxiosCocktails = () => {
-  const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a';
+  const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a";
   const [cocktails, setCocktails] = useState([]);
   // const [searchTerm, setSearchTerm] = useState('a');
 
@@ -28,7 +28,7 @@ const AxiosCocktails = () => {
     } catch (error) {
       console.log(error.response);
     }
-  });
+  }, []);
 
   // console.log(cocktails);
 

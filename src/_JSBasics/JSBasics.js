@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const JSBasics = () => {
   // function outer(x) {
@@ -42,9 +42,9 @@ const JSBasics = () => {
   console.log(dupli(arr1));
 
   const myPromise = new Promise((resolve, reject) => {
-    const x = 'lalit';
-    const y = 'lalit';
-    if (x == y) {
+    const x = "lalit";
+    const y = "lalit";
+    if (x === y) {
       resolve();
     } else {
       reject();
@@ -52,8 +52,8 @@ const JSBasics = () => {
   });
 
   myPromise
-    .then(() => console.log('x nd y are same'))
-    .catch(() => console.log('x and y not same'));
+    .then(() => console.log("x nd y are same"))
+    .catch(() => console.log("x and y not same"));
 
   return (
     <div className="main">
