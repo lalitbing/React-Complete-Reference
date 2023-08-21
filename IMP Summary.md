@@ -362,7 +362,7 @@ return newArray;
 ## Flatten an array
 
 console.log(checkArray(array));
-
+```
 function flatArray(arr) {
 let result = []; // In this we`ll save the output;
 let main = arr,
@@ -380,3 +380,4 @@ main.splice(0, 1);
 return result;
 }
 console.log(flatArray(array));
+```
