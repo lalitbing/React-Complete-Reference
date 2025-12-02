@@ -1,30 +1,6 @@
 import React from "react";
 
 const JSBasics = () => {
-  // function outer(x) {
-  //   console.log('outer');
-  //   function inner() {
-  //     console.log(x);
-  //   }
-  //   return inner;
-  // }
-
-  // var x = 20;
-  // outer(10)();
-
-  // const obj1 = {
-  //   num: 10,
-  // };
-
-  // function add(a) {
-  //   return this.num + a;
-  // }
-
-  // console.log(add.call(obj1, 100));
-
-  // const random = add.bind(obj1, 5);
-  // console.log(random());
-
   function dupli(arr) {
     let cache = {};
     let results = [];
