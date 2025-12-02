@@ -3,6 +3,7 @@ import AxiosDadJoke from "./AxiosFetchingData/AxiosDadJoke";
 import AxiosProducts from "./AxiosFetchingData/AxiosProducts";
 import AxiosRandomUsers from "./AxiosFetchingData/AxiosRandomUsers";
 import CustomHooks from "./CustomHooks/CustomHooks";
+import UseReducerExample from "./Examples/UseReducerExample";
 import Hooks3UseContext from "./Hooks/useContext/Hooks3";
 import HooksUseEffect from "./Hooks/useEffect,useState/Hooks1";
 import Hooks4Memo from "./Hooks/useMemo/Hooks4";
@@ -30,6 +31,7 @@ function App() {
       <Task2Temperature />
       <JSBasics />
       <AxiosCocktails />
+      <UseReducerExample/>
     </div>
   );
 }
